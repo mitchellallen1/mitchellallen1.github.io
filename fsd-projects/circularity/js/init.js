@@ -25,11 +25,11 @@ var init = function (window) {
 
 
         // TODO 2 : Create a function that draws a circle 
-            function drawCircle(){
-                circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
-                physikz.addRandomVelocity(circle, canvas, 5, 5);
-                view.addChild(circle);
-                circles.push(circle);
+            function drawCircle(){ /*creates a cirlce*/
+                circle = draw.randomCircleInArea(canvas, true, true, "#999", 2); /*Creates a circles at a random location on the canvas*/
+                physikz.addRandomVelocity(circle, canvas, 5, 5);/*Gives each circle on the canvas a random speed*/
+                view.addChild(circle);/*Adds circle as a child of view so the circle appears on the screen*/
+                circles.push(circle);/*Saves the circle to an array of circles by pushing it to the end of the array*/
             }        
 
         // TODO 3 : Call the drawCircle() function
@@ -38,6 +38,7 @@ var init = function (window) {
             drawCircle();
             drawCircle();
             drawCircle();
+            Individually calls the circle function 5 times
             */
 
 
@@ -45,6 +46,7 @@ var init = function (window) {
             for(var i = 0; i < 100; i++){
                 drawCircle();
             }
+            /*Replaced drawCircle() loop as an array in order to create 100 circles*/
 
 
 
@@ -66,6 +68,7 @@ var init = function (window) {
                 physikz.updatePosition(circles[3]);
                 physikz.updatePosition(circles[4])
                 ;
+                Changes the position of each circle; however, it doesn't update when more circles are added.
 
             
             // TODO 5 : Call game.checkCirclePosition() on your circles
@@ -74,6 +77,7 @@ var init = function (window) {
                 game.checkCirclePosition(circles[2]);
                 game.checkCirclePosition(circles[3]);
                 game.checkCirclePosition(circles[4]);
+                Checks where each circle is located on the canvas by calling the circles function. Only works with the first five circles because the values are hardcoded.
                 */
 
             // TODO 8 / TODO 9 : Iterate over the array
@@ -83,6 +87,7 @@ var init = function (window) {
             }
             
         }
+        /*Removed repetitive code by turning physikz.updatePosition and game.checkCirclePosition into a for loop. Now the position of every circles will be automatically checked, no matter how many.*/
     
         /* 
         This Function should check the position of a circle that is passed to the 
@@ -95,7 +100,7 @@ var init = function (window) {
             if(circle.x > canvas.width){
                 circle.x = 0;
             }
-            
+            /*Prevents circles from passing through the right side of the screen by resetting them to 0 (the left side)*/
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
                 if ( circle.x < 0) {
                 circle.x = canvas.width;
@@ -104,7 +109,7 @@ var init = function (window) {
             }else if(circle.y < 0){
                 circle.y = canvas.height;
             }
-
+            /*Uses if/else if statements to reset the positions of circles when they hit the borders*/
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
