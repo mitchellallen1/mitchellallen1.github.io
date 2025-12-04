@@ -39,12 +39,12 @@ var background = function (window) {
             // TODO 1:
             // this currently fills the background with an obnoxious yellow;
             // you should modify both the height and color to suit your game
-            var backgroundFill = draw.rect(canvasWidth,groundY,'green'); //draws a rectangle and stores it inside of backgroundFill
+            var backgroundFill = draw.rect(canvasWidth,groundY,'pink'); //draws a rectangle and stores it inside of backgroundFill
             background.addChild(backgroundFill); //adds backgroundFill as a child of backgroundObject
             
             // TODO 2: - Add a moon and starfield
             for(var i = 0; i < 50; i++){
-                var circle = draw.circle(10, "white", "LightGray", 2); //creates a circle with a specified radius, border color, fill color, and alpha (opacity) and stores it in the variable circle
+                var circle = draw.circle(2, "white", "LightGray", 2); //creates a circle with a specified radius, border color, fill color, and alpha (opacity) and stores it in the variable circle
                 circle.x = canvasWidth * Math.random(); //sets a random x position within the canvas's width
                 circle.y = groundY * Math.random(); //sets a random y position within groundY
                 background.addChild(circle); //adds circle to the background container.
