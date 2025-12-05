@@ -16,14 +16,17 @@ var makeLevelData = function (window) {
         speed: -3,
         gameItems: [
           { type: "obstacle", x: 400, y: groundY - 120, damage: 10, rotation: 0, size: 25, image: "img/newmissile.png", offsetX: -25, offsetY: -25, scaleX: 0.25, scaleY: 0.25},
-          { type: "obstacle", x: 600, y: groundY - 10, damage: 20, rotation: 0, size: 25},
-          { type: "obstacle", x: 800, y: groundY - 110, damage: 30, rotation: 0, size: 25},
-          { type: "enemy", x: 600, y: groundY - 50},
-          { type: "enemy", x: 1000, y: groundY - 50},
-          { type: "enemy", x: 1200, y: groundY - 50},
-          { type: "reward", x: 800, y: groundY - 100},
-          { type: "reward", x: 1200, y: groundY - 100},
-          { type: "levelMarker", x: 2000, y: groundY - 85},
+          { type: "obstacle", x: 600, y: groundY - 10, damage: 20, rotation: 0, size: 25, image: "img/newmissile.png", offsetX: -25, offsetY: -25, scaleX: 0.25, scaleY: 0.25},
+          { type: "obstacle", x: 800, y: groundY - 110, damage: 30, rotation: 0, size: 25, image: "img/newmissile.png", offsetX: -25, offsetY: -25, scaleX: 0.25, scaleY: 0.25},
+          
+          { type: "enemy", x: 600, y: groundY - 50, hitZoneSize: 25, image: "img/spikes.png", offsetX: -25, offsetY: -25, speed: 3, damage: 10, score: 100},
+          { type: "enemy", x: 1000, y: groundY - 50, hitZoneSize: 25, image: "img/spikes.png", offsetX: -25, offsetY: -25, speed: 3, damage: 10, score: 100},
+          { type: "enemy", x: 1200, y: groundY - 50, hitZoneSize: 25, image: "img/spikes.png", offsetX: -25, offsetY: -25, speed: 3, damage: 10, score: 100},
+          
+          { type: "reward", x: 800, y: groundY - 100, hitZoneSize: 25, image: "img/newmissile.png", offsetX: -25, offsetY: -25, speed: 3, healthRestored: 20},
+          { type: "reward", x: 1200, y: groundY - 100, hitZoneSize: 25, image: "img/newmissile.png", offsetX: -25, offsetY: -25, speed: 3, healthRestored: 20},
+          
+          { type: "levelMarker", x: 2000, y: groundY - 85, hitZoneSize: 25, image: "img/newmissile.png", offsetX: -25, offsetY: -25, speed: 3, healthRestored: 10},
         ],
       },
       {
