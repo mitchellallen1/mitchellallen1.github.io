@@ -45,13 +45,16 @@ var runLevels = function (window) {
 
     
 
-    function createEnemy(x, y, hitZoneSize, image, offsetX, offsetY, speed, damage, score){
+    function createEnemy(x, y, hitZoneSize, image, offsetX, offsetY, scaleX, scaleY, speed, damage, score){
           var enemy = game.createGameItem("enemy", hitZoneSize); //creates the enemy and makes the hit zone 25, and the stores the enemy in the variable enemy
           var enemyImage = draw.bitmap(image); //creates the image of the enemy and stores it to the variable enemyImage
           
           enemyImage.x = offsetX; //x value offset from image to hit zone
           enemyImage.y = offsetY; //y value offset from image to hit zone
           
+          enemyImage.scaleX = scaleX
+          enemyImage.scaleY = scaleY
+
           enemy.addChild(enemyImage); //attaches the enemyImage to enemyObject
           
           enemy.x = x; //setting the enemy x position
@@ -142,7 +145,7 @@ var runLevels = function (window) {
             createObstacle(element.x, element.y, element.damage, element.rotation, element.size, element.image, element.offsetX, element.offsetY, element.scaleX, element.scaleY);
           };
           if(element.type === "enemy"){
-            createEnemy(element.x, element.y, element.hitZoneSize, element.image, element.offsetX, element.offsetY, element.speed, element.damage, element.score);
+            createEnemy(element.x, element.y, element.hitZoneSize, element.image, element.offsetX, element.offsetY, element.scaleX, element.scaleY, element.speed, element.damage, element.score);
           };
           if(element.type === "reward"){
             createReward(element.x, element.y, element.hitZoneSize, element.image, element.offsetX, element.offsetY, element.speed, element.healthRestored);
