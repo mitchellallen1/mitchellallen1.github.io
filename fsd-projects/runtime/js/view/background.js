@@ -39,10 +39,10 @@ var background = function (window) {
             // TODO 1:
             // this currently fills the background with an obnoxious yellow;
             // you should modify both the height and color to suit your game
-            var backgroundFill = draw.rect(canvasWidth,groundY,'pink'); //draws a rectangle and stores it inside of backgroundFill
-            background.addChild(backgroundFill); //adds backgroundFill as a child of backgroundObject
+            var backgroundImage = draw.bitmap("img/levelBG.png"); //draws a rectangle and stores it inside of backgroundFill
+            background.addChild(backgroundImage); //adds backgroundFill as a child of backgroundObject
             
-            // TODO 2: - Add a moon and starfield
+            /* TODO 2: - Add a moon and starfield
             for(var i = 0; i < 50; i++){
                 var circle = draw.circle(2, "white", "LightGray", 2); //creates a circle with a specified radius, border color, fill color, and alpha (opacity) and stores it in the variable circle
                 circle.x = canvasWidth * Math.random(); //sets a random x position within the canvas's width
@@ -50,16 +50,16 @@ var background = function (window) {
                 background.addChild(circle); //adds circle to the background container.
             }
             
-            var moon = draw.bitmap("img/moon.png"); //creates a bitmap object using the image of moon.png, and then stores it in the moon variable
+            //var moon = draw.bitmap("img/moon.png"); //creates a bitmap object using the image of moon.png, and then stores it in the moon variable
             moon.x = canvas.width - 400; //sets the moon's x position
             moon.y = groundY - 400; //sets the moon's y position
             moon.scaleX = 0.75; //scales the moon's width
             moon.scaleY = 0.75; //scales the moon's height
             background.addChild(moon); //adds the moon to the background container so we can see it
-            
+            */
             
 
-            // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
+            /* TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             for (var i = 0; i < 5; ++i) { //creates 5 buildings
                 var buildingColors = ["Red", "Orange", "Yellow", "Black", "Cyan"];
                 var buildingHeight = 300 * Math.random(400, 700); //creates a variable called buildingHeight that stores the value of the buildings' heights
@@ -69,13 +69,13 @@ var background = function (window) {
                 background.addChild(building); //adds building as a child to background so it can be seen
                 buildings.push(building); //takes that building, and pushes it to the array so it can be drawn
             }
-            
+            */
             // TODO 3: Part 1 - Add a tree
-            tree = draw.bitmap("img/tree.png"); //creates a bitmap object using the tree image and stores it in the variable tree
+            /*tree = draw.bitmap("img/tree.png"); //creates a bitmap object using the tree image and stores it in the variable tree
             tree.x = 600; //sets the x value of the tree
             tree.y = groundY - 230; //sets the y value of the tree
             background.addChild(tree); //adds tree to the background container
-            
+            */
         } // end of render function - DO NOT DELETE
         
         
@@ -88,7 +88,7 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 3: Part 2 - Move the tree!
-            tree.x = tree.x - 4; //moves the tree to the left by subtracting from its current x position
+            /*tree.x = tree.x - 4; //moves the tree to the left by subtracting from its current x position
 
             //checks if the tree has gone off the left and resets to the right
             if (tree.x < -200) {
@@ -102,10 +102,10 @@ var background = function (window) {
                 if(building.x < -200){ //checks if the x of the building has gone off the screen
                     building.x = canvas.width; //resets the building back to the right of the canvas
                 }
-
+                
   // code to do something with each element
             }
-
+            */
         } // end of update function - DO NOT DELETE
         
         

@@ -84,7 +84,7 @@ var runLevels = function (window) {
     
 
 
-    function createReward(x, y, hitZoneSize, image, offsetX, offsetY, speed, healthRestored){
+    function createReward(x, y, hitZoneSize, image, offsetX, offsetY, scaleX, scaleY, speed, healthRestored){
           var reward = game.createGameItem("reward", hitZoneSize); //creates the reward and makes the hit zone 25, and the stores the enemy in the variable enemy
           var rewardImage = draw.bitmap(image); //creates the image of the reward and stores it to the variable rewardImage
           
@@ -97,6 +97,9 @@ var runLevels = function (window) {
           reward.y = y; //setting the enemy y position
           
           game.addGameItem(reward); //adds the reward to the game
+
+          reward.scaleX = scaleX
+          reward.scaleY = scaleY
 
           reward.velocityX -= speed //moving your reward across the screen
 
@@ -151,7 +154,7 @@ var runLevels = function (window) {
             createReward(element.x, element.y, element.hitZoneSize, element.image, element.offsetX, element.offsetY, element.speed, element.healthRestored);
           };
           if(element.type === "levelMarker"){
-            createLevelMarker(element.x, element.y, element.hitZoneSize, element.image, element.offsetX, element.offsetY, element.speed, element.healthRestored);
+            createLevelMarker(element.x, element.y, element.hitZoneSize, element.image, element.offsetX, element.offsetY, element.offsetX, element.offsetY, element.speed, element.healthRestored);
           };
 
       }
