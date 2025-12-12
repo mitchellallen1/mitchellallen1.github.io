@@ -14,7 +14,7 @@ var runLevels = function (window) {
     var levelData = window.opspark.levelData;
 
     // set this to true or false depending on if you want to see hitzones
-    game.setDebugMode(true);
+    game.setDebugMode(false);
 
     // TODOs 5 through 11 go here
     // BEGIN EDITING YOUR CODE HERE
@@ -37,12 +37,12 @@ var runLevels = function (window) {
       obstacleImage.x = offsetX; //offsets the obstacle image horizontally relative to the hitzone
       obstacleImage.y = offsetY; //offsets the obstacle image vertically relative to the hitzone
       
-      obstacleImage.scaleX = scaleX;
-      obstacleImage.scaleY = scaleY;
+      obstacleImage.scaleX = scaleX; //changes the width of the image via the x-axis
+      obstacleImage.scaleY = scaleY; //changes the height of the image via the y-axis
 
-      obstacleHitZone.velocityX -= speed;
+      obstacleHitZone.velocityX -= speed; //moving the image across the screen
 
-      obstacleHitZone.rotationalVelocity = rotation;
+      obstacleHitZone.rotationalVelocity = rotation; //rotates the image
     }
 
     
@@ -54,8 +54,8 @@ var runLevels = function (window) {
           enemyImage.x = offsetX; //x value offset from image to hit zone
           enemyImage.y = offsetY; //y value offset from image to hit zone
           
-          enemyImage.scaleX = scaleX;
-          enemyImage.scaleY = scaleY;
+          enemyImage.scaleX = scaleX; //changes the width of the image via the x-axis
+          enemyImage.scaleY = scaleY; //changes the height of the image via the y-axis
 
           enemy.addChild(enemyImage); //attaches the enemyImage to enemyObject
           
@@ -100,8 +100,8 @@ var runLevels = function (window) {
           
           game.addGameItem(reward); //adds the reward to the game
 
-          reward.scaleX = scaleX;
-          reward.scaleY = scaleY;
+          reward.scaleX = scaleX; //changes the width of the image via the x-axis
+          reward.scaleY = scaleY; //changes the height of the image via the y-axis
 
           reward.velocityX -= speed //moving your reward across the screen
 
@@ -109,7 +109,7 @@ var runLevels = function (window) {
           reward.onPlayerCollision = function(){
               reward.fadeOut();
               game.changeIntegrity(healthRestored); //grants player health
-              game.increaseScore(score);
+              game.increaseScore(score); //grants player score
           }
 
     }
@@ -121,8 +121,8 @@ var runLevels = function (window) {
           levelImage.x = offsetX; //x value offset from image to hit zone
           levelImage.y = offsetY; //y value offset from image to hit zone
           
-          levelMarker.scaleX = scaleX;
-          levelMarker.scaleY = scaleY;
+          levelMarker.scaleX = scaleX; //changes the width of the image via the x-axis
+          levelMarker.scaleY = scaleY; //changes the height of the image via the y-axis
 
           levelMarker.addChild(levelImage); //attaches the levelImage to levelMarker
           
