@@ -109,7 +109,7 @@ var runLevels = function (window) {
           reward.onPlayerCollision = function(){
               reward.fadeOut();
               game.changeIntegrity(healthRestored); //grants player health
-              game.changeIntegrity(score);
+              game.increaseScore(score);
           }
 
     }
@@ -121,8 +121,8 @@ var runLevels = function (window) {
           levelImage.x = offsetX; //x value offset from image to hit zone
           levelImage.y = offsetY; //y value offset from image to hit zone
           
-          level.scaleX = scaleX;
-          level.scaleY = scaleY;
+          levelMarker.scaleX = scaleX;
+          levelMarker.scaleY = scaleY;
 
           levelMarker.addChild(levelImage); //attaches the levelImage to levelMarker
           
@@ -133,7 +133,7 @@ var runLevels = function (window) {
 
           levelMarker.velocityX -= speed; //moving the level marker across the screen
 
-          //handles when halle collides with the enemy
+          //handles when halle collides with the level marker
           levelMarker.onPlayerCollision = function(){
               levelMarker.fadeOut();
               startLevel();
@@ -160,7 +160,7 @@ var runLevels = function (window) {
             createReward(element.x, element.y, element.hitZoneSize, element.image, element.offsetX, element.offsetY, element.scaleX, element.scaleY, element.speed, element.healthRestored, element.score);
           };
           if(element.type === "levelMarker"){
-            createLevelMarker(element.x, element.y, element.hitZoneSize, element.image, element.offsetX, element.offsetY, element.offsetX, element.offsetY, element.scaleX, element.scaleY, element.speed, element.healthRestored);
+            createLevelMarker(element.x, element.y, element.hitZoneSize, element.image, element.offsetX, element.offsetY, element.scaleX, element.scaleY, element.speed, element.healthRestored);
           };
 
       }

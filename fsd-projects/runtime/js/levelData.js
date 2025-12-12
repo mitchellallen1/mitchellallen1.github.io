@@ -31,14 +31,14 @@ var makeLevelData = function (window) {
           { type: "enemy", x: 1400, y: groundY - 50, hitZoneSize: 25, image: "img/newNeoCortex.png", offsetX: -50, offsetY: -80, scaleX: 0.25, scaleY: 0.25, speed: 4, damage: -25, score: 500},
           { type: "enemy", x: 3000, y: groundY - 50, hitZoneSize: 40, image: "img/newUkaUka.png", offsetX: -50, offsetY: -90, scaleX: 0.5, scaleY: 0.5, speed: 7, damage: -10, score: 1000},
           
-          { type: "reward", x: 600, y: groundY - 100, hitZoneSize: 25, image: "img/wumpaCoin.png", offsetX: -150, offsetY: -50, scaleX: 0.50, scaleY: 0.50, speed: 3, healthRestored: 0},
-          { type: "reward", x: 800, y: groundY - 100, hitZoneSize: 25, image: "img/wumpaCoin.png", offsetX: -150, offsetY: -50, scaleX: 0.50, scaleY: 0.50, speed: 3, healthRestored: 0},
-          { type: "reward", x: 1000, y: groundY - 100, hitZoneSize: 25, image: "img/wumpaCrate.png", offsetX: -70, offsetY: -25, scaleX: 0.50, scaleY: 0.50, speed: 3, healthRestored: 0},
-          { type: "reward", x: 1500, y: groundY - 100, hitZoneSize: 25, image: "img/newWumpaFruit.png", offsetX: -25, offsetY: -25, scaleX: 0.05, scaleY: 0.05, speed: 3, healthRestored: 15},
-          { type: "reward", x: 2700, y: groundY - 100, hitZoneSize: 25, image: "img/newAkuAku.png", offsetX: -25, offsetY: -25, scaleX: 0.25, scaleY: 0.25, speed: 3, healthRestored: 60},
-          { type: "reward", x: 3300, y: groundY - 100, hitZoneSize: 25, image: "img/newBlueGem.png", offsetX: -25, offsetY: -25, scaleX: 0.25, scaleY: 0.25, speed: 3, healthRestored: 0},
+          { type: "reward", x: 600, y: groundY - 100, hitZoneSize: 25, image: "img/wumpaCoin.png", offsetX: -150, offsetY: -50, scaleX: 0.50, scaleY: 0.50, speed: 3, healthRestored: 0, score: 100},
+          { type: "reward", x: 800, y: groundY - 100, hitZoneSize: 25, image: "img/wumpaCoin.png", offsetX: -150, offsetY: -50, scaleX: 0.50, scaleY: 0.50, speed: 3, healthRestored: 0, score: 100},
+          { type: "reward", x: 1000, y: groundY - 100, hitZoneSize: 25, image: "img/wumpaCrate.png", offsetX: -70, offsetY: -25, scaleX: 0.50, scaleY: 0.50, speed: 3, healthRestored: 0, score: 1000},
+          { type: "reward", x: 1500, y: groundY - 100, hitZoneSize: 25, image: "img/newWumpaFruit.png", offsetX: -25, offsetY: -25, scaleX: 0.05, scaleY: 0.05, speed: 3, healthRestored: 15, score: 0},
+          { type: "reward", x: 2700, y: groundY - 100, hitZoneSize: 25, image: "img/newAkuAku.png", offsetX: -25, offsetY: -25, scaleX: 0.25, scaleY: 0.25, speed: 3, healthRestored: 60, score: 0},
+          { type: "reward", x: 3300, y: groundY - 100, hitZoneSize: 25, image: "img/newBlueGem.png", offsetX: -25, offsetY: -25, scaleX: 0.25, scaleY: 0.25, speed: 3, healthRestored: 0, score: 1000},
           
-          { type: "levelMarker", x: 1500, y: groundY - 85, hitZoneSize: 25, image: "img/timeRelic.png", offsetX: -25, offsetY: -25, scaleX: 0.80, scaleY: 0.80, speed: 3, healthRestored: 10},
+          { type: "levelMarker", x: 5000, y: groundY - 85, hitZoneSize: 25, image: "img/timeRelic.png", offsetX: -25, offsetY: -25, scaleX: 0.40, scaleY: 0.40, speed: 5, healthRestored: 30},
         ],
       },
       {
@@ -46,9 +46,10 @@ var makeLevelData = function (window) {
         number: 2,
         speed: -3,
         gameItems: [
-          { type: "obstacle", x: 400, y: groundY - 110, damage: 20, rotation: 0, size: 27, image: "img/classicBomb.png", offsetX: -50, offsetY: -50, scaleX: 0.5, scaleY: 0.5, speed: 3},
-          { type: "obstacle", x: 400, y: groundY - 110, damage: 20, rotation: 0, size: 27, image: "img/classicMissile.png", offsetX: -50, offsetY: -50, scaleX: 0.5, scaleY: 0.5, speed: 3},
-          { type: "obstacle", x: 400, y: groundY - 110, damage: 20, rotation: 0, size: 27, image: "img/classicSpikedShell.png", offsetX: -50, offsetY: -50, scaleX: 0.5, scaleY: 0.5, speed: 3},
+          { type: "obstacle", x: 5700, y: groundY - 10, damage: 20, rotation: 0, size: 25, image: "img/classicBomb.png", offsetX: -50, offsetY: -50, scaleX: 0.5, scaleY: 0.5, speed: 3},
+          { type: "obstacle", x: 6000, y: groundY - 110, damage: 20, rotation: 0, size: 27, image: "img/classicMissile.png", offsetX: -50, offsetY: -50, scaleX: 0.5, scaleY: 0.5, speed: 3},
+          { type: "obstacle", x: 6400, y: groundY - 10, damage: 20, rotation: 0, size: 25, image: "img/classicSpikedShell.png", offsetX: -50, offsetY: -50, scaleX: 0.5, scaleY: 0.5, speed: 3},
+          { type: "obstacle", x: 6400, y: groundY - 10, damage: 20, rotation: 0, size: 25, image: "img/classicTNT.png", offsetX: -50, offsetY: -50, scaleX: 0.5, scaleY: 0.5, speed: 3},
         ],
       },
     ];
