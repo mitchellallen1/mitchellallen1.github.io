@@ -57,7 +57,6 @@ var makeLevelData = function (window) {
 
           { type: "enemy", x: 5900, y: groundY - 50, hitZoneSize: 40, image: "img/classicJellyfish.png", offsetX: -50, offsetY: -50, scaleX: 0.15, scaleY: 0.15, speed: 4, damage: -15, score: 20},
           { type: "enemy", x: 6400, y: groundY - 50, hitZoneSize: 40, image: "img/classicNBrio.png", offsetX: -50, offsetY: -100, scaleX: 0.50, scaleY: 0.50, speed: 4, damage: -25, score: 40},
-          { type: "enemy", x: 6900, y: groundY - 50, hitZoneSize: 25, image: "img/classicNeoCortex.png", offsetX: -50, offsetY: -100, scaleX: 0.15, scaleY: 0.15, speed: 4, damage: -30, score: 50},
           { type: "enemy", x: 6800, y: groundY - 50, hitZoneSize: 40, image: "img/classicUkaUka.png", offsetX: -50, offsetY: -90, scaleX: 0.5, scaleY: 0.5, speed: 7, damage: -60, score: 2000},
           { type: "enemy", x: 7400, y: groundY - 50, hitZoneSize: 40, image: "img/classicJellyfish.png", offsetX: -50, offsetY: -50, scaleX: 0.15, scaleY: 0.15, speed: 4, damage: -15, score: 20},
           { type: "enemy", x: 7900, y: groundY - 50, hitZoneSize: 25, image: "img/classicNeoCortex.png", offsetX: -50, offsetY: -100, scaleX: 0.15, scaleY: 0.15, speed: 10, damage: -30, score: 50},
@@ -69,7 +68,6 @@ var makeLevelData = function (window) {
           { type: "reward", x: 7500, y: groundY - 100, hitZoneSize: 25, image: "img/classicWumpaFruit.png", offsetX: -25, offsetY: -25, scaleX: 0.10, scaleY: 0.10, speed: 3, healthRestored: 20, score: 0},
           { type: "reward", x: 8200, y: groundY - 100, hitZoneSize: 25, image: "img/classicAkuAku.png", offsetX: -25, offsetY: -25, scaleX: 0.10, scaleY: 0.10, speed: 4, healthRestored: 60, score: 0},
           { type: "reward", x: 8700, y: groundY - 100, hitZoneSize: 25, image: "img/classicBlueGem.png", offsetX: -25, offsetY: -25, scaleX: 0.15, scaleY: 0.25, speed: 4, healthRestored: 0, score: 1250},
-          { type: "reward", x: 10000, y: groundY - 100, hitZoneSize: 25, image: "img/classicGoldenWumpa.png", offsetX: -25, offsetY: -25, scaleX: 0.50, scaleY: 0.50, speed: 3, healthRestored: 0, score: 100000},
         ],
       },
     ];
